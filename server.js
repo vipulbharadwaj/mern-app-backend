@@ -14,7 +14,7 @@ app.use(express.json());
 const corsOptions = {
     origin: [
         "http://localhost:5173",
-        "https://vip-tech.netlify.app",
+        "https://mern-app-frontend-blue.vercel.app",
         "https://mern-app-backendd.onrender.com/service"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
