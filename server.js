@@ -12,8 +12,11 @@ const errorMiddleware = require('./middlewares/error-middleware');
 app.use(express.json());
 
 const corsOptions = {
-    origin: "http://localhost:5173",
-    method: "GET, POST, PUT, DELETE, PATCH, HEAD",
+    origin: [
+        "http://localhost:5173",
+        "https://66793714543aae6647ed777a--wonderful-macaron-91d4ef.netlify.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
     credentials: true,
 };
 
@@ -27,7 +30,7 @@ app.use(adminRoute);
 app.use(errorMiddleware);
 
      
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 connectDb().then(() => {
 app.listen(PORT, () =>{
     console.log(`Server is running on port ${PORT}`);
