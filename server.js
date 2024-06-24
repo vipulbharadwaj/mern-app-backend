@@ -14,7 +14,7 @@ app.use(express.json());
 const corsOptions = {
     origin: [
         "http://localhost:5173",
-        "https://66793714543aae6647ed777a--wonderful-macaron-91d4ef.netlify.app",
+        "https://vip-tech.netlify.app",
         "https://mern-app-backendd.onrender.com/service"
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD"],
